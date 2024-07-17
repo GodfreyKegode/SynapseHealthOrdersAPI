@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using SynapseHealthOrderMonitorAPI.Models;
+﻿using SynapseHealthOrderMonitorAPI.Models;
 
 namespace SynapseHealthOrderMonitorAPI.Data.Repositories
 {
