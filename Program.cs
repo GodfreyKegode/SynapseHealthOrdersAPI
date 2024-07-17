@@ -5,10 +5,6 @@ using SynapseHealthOrderMonitorAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// var loggerFactory = LoggerFactory.Create( builder => builder.AddConsole().AddDebug().SetMinimumLevel(LogLevel.Debug));
-
-// builder.Logging.AddConsole().AddDebug().SetMinimumLevel(LogLevel.Debug);
-
 builder.Services.AddLogging();
 builder.Services.AddHttpClient();
 
