@@ -1,4 +1,4 @@
-namespace SynapseHealthOrdersAPI
+namespace SynapseHealthOrderMonitorAPI
 {
     public class WeatherForecast
     {

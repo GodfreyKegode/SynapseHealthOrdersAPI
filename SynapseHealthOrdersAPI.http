@@ -1,6 +1,6 @@
-@SynapseHealthOrdersAPI_HostAddress = http://localhost:5095
+@SynapseHealthOrderMonitorAPI_HostAddress = http://localhost:5095
 
-GET {{SynapseHealthOrdersAPI_HostAddress}}/weatherforecast/
+GET {{SynapseHealthOrderMonitorAPI_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###

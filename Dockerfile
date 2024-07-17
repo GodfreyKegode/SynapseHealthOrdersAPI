@@ -9,17 +9,17 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["SynapseHealthOrdersAPI.csproj", "."]
-RUN dotnet restore "./././SynapseHealthOrdersAPI.csproj"
+COPY ["SynapseHealthOrderMonitorAPI.csproj", "."]
+RUN dotnet restore "./././SynapseHealthOrderMonitorAPI.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "./SynapseHealthOrdersAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "./SynapseHealthOrderMonitorAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./SynapseHealthOrdersAPI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./SynapseHealthOrderMonitorAPI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "SynapseHealthOrdersAPI.dll"]
+ENTRYPOINT ["dotnet", "SynapseHealthOrderMonitorAPI.dll"]
