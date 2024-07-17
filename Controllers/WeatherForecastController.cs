@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace SynapseHealthOrdersAPI.Controllers
+namespace SynapseHealthOrderMonitorAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
